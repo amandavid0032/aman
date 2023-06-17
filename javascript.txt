@@ -1,5 +1,7 @@
 Java Script notes 
 
+Conceptual  Aside 
+
 synatx parser ==> A syntax pareser is a part of javascript engine its reads your code character by character and 
                   tells what your code does and checks if the grammer is correct or not. it translates your code
                   to mechine readable code 
@@ -35,6 +37,11 @@ function a (){                                            // global level
 Execution Context ==>  There are lots of Lexical Environment which  one is runing is managed via  exection Context. Its can contion
                        thing beyond what your written in your code 
 
+There are Two type of Execution Context
+
+Functio  Execution Context ==> when ever function is invoked the new function Execution Context created . each new unction is own its 
+                              execution context which includes local variable,parameter and reference to its Environment
+
 example ==> function --> Function Execution    Context
                             |        |           |
                          name      code run    statement 
@@ -44,5 +51,30 @@ Function test (){
 }            
 test();
 
+Global Execution context ==> when ever the code is run in javascript it's run inside the execution context .Meaning a wrapper that the 
+                            javascript engine  wrap that is up, that code that you  written in global execution.
 
-Global 
+
+. There will be always a global object in browser in window  each new tab  have  there own global execution context hence  has its 
+  own window object 
+. in broswer  : window ==  this
+  when code is executed in javascript its automaticaly created == this 
+
+example ==>
+
+ var a = 10;
+function b() {
+    document.write('hello world');
+}
+a         // 10
+window.a  // 10
+this.a    // 10   
+
+b();        // hello wolrd
+window.b(); 
+this.window.b();
+
+in this example hello world is call there time and a has value =10 
+
+
+Name/Value Pair and objects
