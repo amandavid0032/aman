@@ -1,2 +1,48 @@
 Java Script notes 
 
+synatx parser ==> A syntax pareser is a part of javascript engine its reads your code character by character and 
+                  tells what your code does and checks if the grammer is correct or not. it translates your code
+                  to mechine readable code 
+
+ example => code                                            example => computer instruction 
+     
+function hello(){                                           function
+    var a ='hello aman';                                    variable 
+
+}                 
+                  
+                                     parsing 
+                                       |
+                                     grammer checks
+                                       |
+                                     language
+
+Lexical Environment ==> Means exists in programing languages in which where you write something is important 
+                                             or 
+                        physical code where you write the code in the programing 
+
+example ==> code 
+
+ function test (){                                         // global level 
+
+ }  
+function a (){                                            // global level  
+    function b(){                                         // local level
+
+    }
+ }                                           
+
+Execution Context ==>  There are lots of Lexical Environment which  one is runing is managed via  exection Context. Its can contion
+                       thing beyond what your written in your code 
+
+example ==> function --> Function Execution    Context
+                            |        |           |
+                         name      code run    statement 
+
+Function test (){
+    consale log ('hello aman');
+}            
+test();
+
+
+Global 
